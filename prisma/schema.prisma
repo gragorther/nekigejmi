@@ -9,3 +9,10 @@ datasource db {
   provider = "sqlite"
   url      = env("DATABASE_URL")
 }
+
+model Games {
+ id Int @id @default(autoincrement())
+ rating Int
+ type String
+ name String
+}
