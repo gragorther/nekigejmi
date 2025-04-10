@@ -5,10 +5,26 @@
 	import Title from '$lib/Title.svelte';
 	export let data;
 	const games = data.games;
-	import { Rating, Button } from 'flowbite-svelte';
+	import { Rating, Button, Select } from 'flowbite-svelte';
 </script>
 
-<h1 class="text-3xl font-bold underline">Hello World</h1>
+<h1 class="text-3xl font-bold underline">Games</h1>
+
+<Form action="addGame">
+	<label for="name">Name</label>
+	<input id="name" name="name" required />
+
+	<label for="rating">Rating</label>
+	<input type="number" id="rating" name="rating" required />
+	<select name="interest" required>
+		<option value="sandbox">Sandbox</option>
+		<option value="platformer">Platformer</option>
+		<option value="factory">Factory</option>
+		<option value="rpg">RPG</option>
+		<option value="action">Action</option>
+	</select>
+	<Button type="submit" color="green" outline>Submit</Button>
+</Form>
 
 <DivGrid>
 	{#each games
