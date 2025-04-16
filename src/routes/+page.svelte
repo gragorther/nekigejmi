@@ -16,7 +16,7 @@
 
 	<label for="rating">Rating</label>
 	<input type="number" id="rating" name="rating" required />
-	<select name="interest" required>
+	<select name="type" required>
 		<option value="sandbox">Sandbox</option>
 		<option value="platformer">Platformer</option>
 		<option value="factory">Factory</option>

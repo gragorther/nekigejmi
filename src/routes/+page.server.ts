@@ -13,16 +13,10 @@ export const actions = {
 	addGame: async (event) => {
 		console.log('kebab');
 		const form = await event.request.formData();
-		const id = parseInt(form.get('id'));
 		const rating = parseInt(form.get('rating'));
 		const type = form.get('type');
 		const name = form.get('name');
-		if (typeof id !== 'number') {
-			return fail(500, { id, incorrect: true });
-		}
-		if (typeof rating !== 'number') {
-			return fail(500, { id, incorrect: true });
-		}
+		console.log(form, rating, type, name);
 		if (typeof type !== 'string') {
 			return fail(500, { type, incorrect: true });
 		}
@@ -33,7 +27,6 @@ export const actions = {
 		// Dodaj novega prijatelja
 		await db.games.create({
 			data: {
-				id: id,
 				rating: rating,
 				type: type,
 				name: name

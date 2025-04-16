@@ -3,7 +3,7 @@
 </script>
 
 <form
-	class="bg-slate-300 flex flex-col gap-4 p-4 border-purple-700 border rounded-md m-2 place-content-center grow shrink"
+	class="bg-slate-300 flex flex-col gap-4 p-4 border-purple-700 border rounded-md m-2 place-content-center w-"
 	method="POST"
 	action="?/{action}"
 >
